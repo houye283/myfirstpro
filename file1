@@ -1,1 +1,10 @@
-new file1
+#!/usr/bin/env python
+#utf-8
+#
+#
+def log(func):
+	def dec():
+		def wrapper(func):
+			print('call %s' %func.__name__)
+			func
+	return dec
